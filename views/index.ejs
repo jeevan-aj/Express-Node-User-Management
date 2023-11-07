@@ -1,0 +1,36 @@
+<!-- inclue header -->
+<%-include('include/_header')%>
+<!-- /include header -->
+
+<div class="container ">
+    <!-- section1 -->
+   <div class="section1_firstdiv text-center m-5">
+       <a href="add_user" class="new_user text-decoration-none  p-2 ">New user<span class="bi bi-person-fill"></span></a>
+   </div>
+   <!-- section2 -->
+   <form action="/" method="post"></form>
+   <div class="section2_fifrstdiv container d-flex justify-content-center">
+           <table>
+               <thead>
+                   <tr class="first-tr">
+                       <td>ID</td>
+                       <td>Name</td>
+                       <td>@Email</td>
+                       <td>Gender</td>
+                       <td>Status</td>
+                       <td>Action</td>
+                   </tr>
+               </thead>
+               <tbody>
+                
+                <%-include('include/_show')%>
+                 
+               </tbody>
+           </table>
+   </div>
+</div>
+
+
+<!-- inclue footer -->
+<%-include('include/_footer')%>
+<!-- /include footer -->
