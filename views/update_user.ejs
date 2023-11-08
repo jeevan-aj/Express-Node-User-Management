@@ -10,7 +10,49 @@
    <!-- section2 -->
   
    <!-- adduser form -->
-   <%-include('include/_form')%>
+   <div class="section2_fifrstdiv container  justify-content-center">
+    <div class="instruction_div">Use the form below to create new user</div>
+    <form  method="POST" id="update_user">
+     <div class="form-group">
+        <label  class="text-secondary ">Name</label>
+        <input type="hidden" name="id" value="<%= user._id%>">
+        <input type="text"  name="name" placeholder="enter name" value="<%= user.name%>">
+     </div>
+     <div class="form-group">
+        <label  class="text-secondary ">Email</label>
+        <input type="text"  name="email" value="<%= user.email%>" placeholder="example@gmail.com">
+     </div>
+     <div class="form-group">
+      <label  class="text-secondary ">phone</label>
+      <input type="number"  name="phone" value="<%= user.phone%>" placeholder="phone">
+   </div>
+    
+
+     <!-- gender -->
+     <div class="form-group Gender-form">
+        <label  class="gender-label">Gender</label>
+        <input type="radio" name="gender" value="male"<%= user.gender=='male'?'checked':''%>>
+        <label >male</label>
+        
+        <input type="radio" name="gender" value="female"<%= user.gender=='female'?'checked':''%>>
+        <label >female</label>
+     </div>
+     <!-- status -->
+     <div class="form-group Status-form">
+        <label  class="Status-label">Status</label>
+        <input type="radio" name="status" value="active"<%= user.status =='active'?'checked':''%>>
+        <label >active</label>
+        
+        <input type="radio" name="status" value="inactive"<%= user.status =="active"?'checked':''%>>
+        <label >inactive</label>
+     </div>
+     <div class="form-group">
+        <button type="submit" class="btn btn-primary">save</button>
+     </div>
+    </form>
+   
+    
+</div>
    <!-- /add_user form -->
 
 </div>
