@@ -1,21 +1,23 @@
+<%for (i=0;i<users.length;i++){%>
 <tr>
-    <td>1</td>
-    <td>jeevan</td>
-    <td>jeevanaj@123</td>
-    <td>male</td>
-    <td>active</td>
+    <td><%= i+1%></td>
+    <td><%= users[i].name%></td>
+    <td><%= users[i].email%></td>
+    <td><%= users[i].phone%></td>
+    <td><%= users[i].gender%></td>
+    <td><%= users[i].status%></td>
     <td class="d-flex justify-content-between px-5" id="trash-pen-id">
         <div>
-            <a href="" class="delete_button">
+            <a href="" class="delete_button" data-id="<%= users[i]._id%>">
                 <span class="bi bi-trash"></span>
             </a>
         </div>
         <div>
-            <a href="/update_user" class="edit_button">
+            <a href="/update_user?id=<%= users[i]._id%>" class="edit_button">
                 <span class="bi bi-pen"></span>
             </a>
         </div>
        
     </td>
-    
 </tr>
+<%}%>
